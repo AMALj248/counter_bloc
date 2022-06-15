@@ -8,8 +8,10 @@ abstract class CounterEvent extends Equatable {
 }
 
 class CounterScreenRequested extends CounterEvent {
-  CounterScreenRequested();
+  final cntVal;
+  CounterScreenRequested(this.cntVal);
 
   @override
   List<Object> get props => [];
 }
+

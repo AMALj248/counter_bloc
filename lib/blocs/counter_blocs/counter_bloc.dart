@@ -15,7 +15,14 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
   ) async* {
    if( event is CounterScreenRequested){
      try{
-     }
+       yield(CounterProgress());
+
+       yield(CounterSuccess(event.cntVal));
+     } catch(e){
+       print(e);
+       yield(CounterFailure(e));
     }
+    }
+
   }
 }

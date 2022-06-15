@@ -11,9 +11,11 @@ class CounterInitial extends CounterState {}
 class CounterProgress extends CounterState {}
 
 class CounterSuccess extends CounterState {
-
+  final countVal;
+  CounterSuccess(this.countVal);
 }
 
 class CounterFailure extends CounterState {
-
+  final exception;
+  CounterFailure(this.exception);
 }
